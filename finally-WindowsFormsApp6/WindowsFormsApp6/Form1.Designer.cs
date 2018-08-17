@@ -52,6 +52,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,12 +60,14 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(8, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(447, 81);
+            this.richTextBox1.Size = new System.Drawing.Size(400, 81);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button23);
             this.groupBox1.Controls.Add(this.button22);
             this.groupBox1.Controls.Add(this.button21);
             this.groupBox1.Controls.Add(this.button20);
@@ -315,6 +318,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(414, 24);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(41, 81);
+            this.button23.TabIndex = 23;
+            this.button23.Text = "历史记录";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -355,6 +368,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button23;
     }
 }
 

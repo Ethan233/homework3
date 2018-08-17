@@ -18,6 +18,7 @@ namespace WindowsFormsApp6
             InitializeComponent();
         }
 
+        public string result ;
         int tab = 0;
         //记录指针
         int Precord = 0;
@@ -102,12 +103,12 @@ namespace WindowsFormsApp6
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button12_Click(object sender, EventArgs e)
+        public void button12_Click(object sender, EventArgs e)
         {
             try
             {
                 //就是结果
-                String result = Microsoft.JScript.Eval.JScriptEvaluate(this.text, ve).ToString();
+                result = Microsoft.JScript.Eval.JScriptEvaluate(this.text, ve).ToString();
                 this.richTextBox1.Text = result;
                 this.record[RecordNum] = this.text;
                 this.text = result;
@@ -123,15 +124,13 @@ namespace WindowsFormsApp6
                 this.text = "";
                 tab = 0;
             }
-            string result1 = @"F:\history.txt";
+
+            string result1 = @"D:\history.txt";
             FileStream fs = new FileStream(result1, FileMode.Append);
             StreamWriter wr = null;
             wr = new StreamWriter(fs);
-            for (int i = 0; i < RecordNum; i++)
-                wr.WriteLine(Convert.ToString(record[i]));
-            wr.WriteLine(Convert.ToString("=" + richTextBox1.Text));
+            wr.WriteLine(record[RecordNum - 1] + "=" + richTextBox1.Text);
             wr.Close();
-
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -190,9 +189,9 @@ namespace WindowsFormsApp6
             Precord--;
             if (Precord < 0)
             {
-                Precord = RecordNum;
+                Precord = 0;
             }
-            // this.text = this.record[Precord];
+            this.text = this.record[Precord];
             this.richTextBox1.Text = this.record[Precord];
         }
 
@@ -201,10 +200,9 @@ namespace WindowsFormsApp6
             Precord++;
             if (Precord > RecordNum)
             {
-                Precord = 0;
+                Precord = RecordNum;
             }
-            // this.text = this.record[Precord];
-
+            this.text = this.record[Precord];
             this.richTextBox1.Text = this.record[Precord];
 
         }
@@ -212,6 +210,16 @@ namespace WindowsFormsApp6
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"D:\history.txt");
         }
     }
 }
