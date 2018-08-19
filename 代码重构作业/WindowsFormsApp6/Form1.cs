@@ -18,7 +18,6 @@ namespace WindowsFormsApp6
             InitializeComponent();
         }
 
-        //处理表达式
         public void addComments(String s)
         {
             Program.text += s;
@@ -73,62 +72,56 @@ namespace WindowsFormsApp6
             this.addComments("9");
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button0_Click(object sender, EventArgs e)
         {
             this.addComments("0");
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button_point_Click(object sender, EventArgs e)
         {
             this.addComments(".");
 
         }
 
-        /// <summary>
-        /// =按钮的触发事件,最终计算结果并显示
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void button12_Click(object sender, EventArgs e)
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            this.addComments("+");
+        }
+
+        private void button_sub_Click(object sender, EventArgs e)
+        {
+            this.addComments("-");
+        }
+
+        private void button_mul_Click(object sender, EventArgs e)
+        {
+            this.addComments("*");
+        }
+
+        private void button_div_Click(object sender, EventArgs e)
+        {
+            this.addComments("/");
+        }
+
+        private void button_left_bracket_Click(object sender, EventArgs e)
+        {
+            this.addComments("(");
+        }
+
+        private void button_right_bracket_Click(object sender, EventArgs e)
+        {
+            this.addComments(")");
+        }
+
+        public void button_equ_Click(object sender, EventArgs e)
         {
             calculate x = new calculate();
             this.richTextBox1.Text=x.equal();
             Log y = new Log();
             y.save();
-
         }
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-            this.addComments("+");
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            this.addComments("-");
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            this.addComments("*");
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            this.addComments("/");
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            this.addComments("(");
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            this.addComments(")");
-        }
-
-        private void button19_Click(object sender, EventArgs e)
+        private void button_back_Click(object sender, EventArgs e)
         {
             if (Program.tab > 0)
             {
@@ -143,22 +136,20 @@ namespace WindowsFormsApp6
             this.richTextBox1.Text = Program.text;
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void button_reset_Click(object sender, EventArgs e)
         {
             Program.text = "";
             this.richTextBox1.Text = Program.text;
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void button_left_move_Click(object sender, EventArgs e)
         {
-            //左移
             this.richTextBox1.Text = calculate.move(Program.Precord - 1);
         }
 
 
-        private void button22_Click(object sender, EventArgs e)
+        private void button_right_move_Click(object sender, EventArgs e)
         {
-            //右移
             this.richTextBox1.Text = calculate.move(Program.Precord + 1);
         }
 
@@ -173,7 +164,7 @@ namespace WindowsFormsApp6
 
         }
 
-        private void button23_Click(object sender, EventArgs e)
+        private void button_history_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(@"D:\history.txt");
         }

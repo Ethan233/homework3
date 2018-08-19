@@ -38,3 +38,13 @@ C:\Users\79971\Desktop\新建文件夹 (4)\homework3\代码重构作业\WindowsF
 C:\Users\79971\Desktop\新建文件夹 (4)\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CoreCompileInputs.cache
 C:\Users\79971\Desktop\新建文件夹 (4)\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\79971\Desktop\新建文件夹 (4)\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\bin\Debug\WindowsFormsApp6.exe.config
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\bin\Debug\WindowsFormsApp6.exe
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\bin\Debug\WindowsFormsApp6.pdb
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csprojAssemblyReference.cache
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Form1.resources
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Properties.Resources.resources
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.GenerateResource.cache
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CoreCompileInputs.cache
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
+F:\new hw 3\homework3\代码重构作业\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
